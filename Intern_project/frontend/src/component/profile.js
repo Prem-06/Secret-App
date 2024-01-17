@@ -11,7 +11,7 @@ const Profile = () => {
   const notifyA=(val)=> toast.success(val)
   const profiedata=JSON.parse(localStorage.getItem('detail'));
   useEffect(()=>{
- fetch(`http://localhost:5000/profile/${JSON.parse(localStorage.getItem("detail"))._id}`,{
+ fetch(`https://secret-app-delta.vercel.app/profile/${JSON.parse(localStorage.getItem("detail"))._id}`,{
   headers:{
     "Authorization":"Bearer"+localStorage.getItem("token")
   }
@@ -27,7 +27,7 @@ return result.json();
  const deletesecret=(id)=>{
  const confirm=window.confirm('Are you want to delete it?')
  if(confirm){
-  fetch(`http://localhost:5000/secret/${id}`,{
+  fetch(`https://secret-app-delta.vercel.app/secret/${id}`,{
     method:'delete',
     headers:{
       'Content-Type':'application/json',
