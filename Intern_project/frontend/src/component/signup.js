@@ -23,7 +23,7 @@ else if(!passwordregex.test(password)){
   notifyB("Password must contain atleast 8 characters,including atleast 1 numeric value, 1 lowercase(a-z),1 uppercase(A-Z) and 1 special character")
 return
 }
-   await fetch('http://localhost:5000/signup',{
+   await fetch('https://secret-app-delta.vercel.app/signup',{
       method:"post",
       headers:{"Content-Type":"Application/json"},
       body:JSON.stringify({
