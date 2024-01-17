@@ -11,7 +11,7 @@ const Secret = () => {
   
    const send_secret=()=>{
     const detail=JSON.parse(localStorage.getItem('detail'));
-       fetch('http://localhost:5000/postsecret',{
+       fetch('https://secret-app-delta.vercel.app/postsecret',{
         method:'post',
         headers:{"Content-Type":"application/json",
         "authorization":"Bearer"+localStorage.getItem('token'),
