@@ -31,7 +31,7 @@ const Home = () => {
     navigate('../signup')
     return;
   }
-  fetch('http://localhost:5000/home').then((val)=>{
+  fetch('https://secret-app-delta.vercel.app//home').then((val)=>{
       return val.json();
   }).then((res)=>{  
    setsecrets(res);
@@ -40,7 +40,7 @@ const Home = () => {
   })
  },[])
  const likesecret=(id)=>{
-  fetch('http://localhost:5000/like',{
+  fetch('https://secret-app-delta.vercel.app//like',{
     method:"put",
     headers:{
       "Content-Type":"application/json",
@@ -66,7 +66,7 @@ const Home = () => {
   })
 }
 const unlikesecret=(id)=>{
-  fetch('http://localhost:5000/unlike',{
+  fetch('https://secret-app-delta.vercel.app//unlike',{
     method:"put",
     headers:{
       "Content-Type":"application/json",
@@ -92,7 +92,7 @@ const unlikesecret=(id)=>{
   })
 }
 const makecomment=(val,id)=>{
-  fetch('http://localhost:5000/comment',{
+  fetch('https://secret-app-delta.vercel.app//comment',{
     method:"put",
     headers:{
       "Content-Type":"application/json",
